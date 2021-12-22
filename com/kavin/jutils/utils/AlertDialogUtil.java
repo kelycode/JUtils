@@ -1,9 +1,10 @@
 package com.kavin.jutils.utils;
 
+import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.support.annotation.NonNull;
-import android.support.v7.app.AlertDialog;
+
+import androidx.annotation.NonNull;
 
 /**
  * 系统弹出对话框工具类

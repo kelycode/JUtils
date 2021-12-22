@@ -8,18 +8,19 @@ import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Handler;
 import android.os.Looper;
-import android.support.annotation.ColorInt;
-import android.support.annotation.DrawableRes;
-import android.support.annotation.LayoutRes;
-import android.support.annotation.Nullable;
-import android.support.annotation.StringRes;
-import android.support.v4.view.ViewCompat;
-import android.support.v4.widget.TextViewCompat;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.ColorInt;
+import androidx.annotation.DrawableRes;
+import androidx.annotation.LayoutRes;
+import androidx.annotation.Nullable;
+import androidx.annotation.StringRes;
+import androidx.core.view.ViewCompat;
+import androidx.core.widget.TextViewCompat;
 
 import java.lang.ref.WeakReference;
 
@@ -46,7 +47,7 @@ public final class ToastUtil {
     /* x 偏移 */
     private static int xOffset = 0;
     /* y 偏移 */
-    private static int yOffset = (int) (64 * jutils.getApp().getResources().getDisplayMetrics().density + 0.5);
+    private static int yOffset = (int) (64 * JUtils.getApp().getResources().getDisplayMetrics().density + 0.5);
     /* Toast 的背景色 */
     private static int mBgColor = COLOR_DEFAULT;
     /* Toast 的背景资源 */
@@ -143,7 +144,7 @@ public final class ToastUtil {
      * @param duration 显示时间
      */
     public static void show(@StringRes int resId, int duration) {
-        show(jutils.getApp().getResources().getText(resId).toString(), duration);
+        show(JUtils.getApp().getResources().getText(resId).toString(), duration);
     }
 
     /**
@@ -164,7 +165,7 @@ public final class ToastUtil {
      * @param args     格式化字符串中格式指定符引用的参数
      */
     private static void show(@StringRes int resId, int duration, Object... args) {
-        show(String.format(jutils.getApp().getResources().getString(resId), args), duration);
+        show(String.format(JUtils.getApp().getResources().getString(resId), args), duration);
     }
 
     /**
@@ -254,7 +255,7 @@ public final class ToastUtil {
             @Override
             public void run() {
                 cancel();
-                mToast = Toast.makeText(jutils.getApp(), text, duration);
+                mToast = Toast.makeText(JUtils.getApp(), text, duration);
                 TextView tvMessage = (TextView) mToast.getView().findViewById(android.R.id.message);
                 TextViewCompat.setTextAppearance(tvMessage, android.R.style.TextAppearance);
                 tvMessage.setTextColor(mTextColor);
@@ -279,7 +280,7 @@ public final class ToastUtil {
             @Override
             public void run() {
                 cancel();
-                mToast = new Toast(jutils.getApp());
+                mToast = new Toast(JUtils.getApp());
                 mToast.setView(view);
                 mToast.setDuration(duration);
                 mToast.setGravity(mGravity, xOffset, yOffset);
@@ -351,7 +352,7 @@ public final class ToastUtil {
                 }
             }
         }
-        LayoutInflater inflate = (LayoutInflater) jutils.getApp().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        LayoutInflater inflate = (LayoutInflater) JUtils.getApp().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         final View toastView = inflate.inflate(layoutId, null);
         mViewWeakRef = new WeakReference<>(toastView);
         mLayoutId = layoutId;

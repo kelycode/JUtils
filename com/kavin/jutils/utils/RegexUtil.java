@@ -1,6 +1,6 @@
 package com.kavin.jutils.utils;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import com.kavin.jutils.constant.RegexCst;
 

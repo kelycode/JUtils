@@ -2,8 +2,9 @@ package com.kavin.jutils.utils.permission;
 
 
 import android.app.Activity;
-import android.support.annotation.NonNull;
-import android.support.v4.app.ActivityCompat;
+
+import androidx.annotation.NonNull;
+import androidx.core.app.ActivityCompat;
 
 /**
  * 权限请求类

@@ -7,8 +7,9 @@ import android.app.Activity;
 import android.app.Application;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.RequiresApi;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 
 import java.lang.ref.WeakReference;
 import java.util.LinkedList;
@@ -65,7 +66,7 @@ public class JUtils {
         }
     };
 
-    private jutils() {
+    private JUtils() {
         throw new UnsupportedOperationException("cannot be instantiated");
     }
 

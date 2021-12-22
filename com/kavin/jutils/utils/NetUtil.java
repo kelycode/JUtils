@@ -6,8 +6,9 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
-import android.support.annotation.Nullable;
 import android.telephony.TelephonyManager;
+
+import androidx.annotation.Nullable;
 
 import com.kavin.jutils.constant.NetworkType;
 import com.kavin.jutils.utils.log.LogUtil;

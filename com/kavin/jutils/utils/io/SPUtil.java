@@ -3,7 +3,8 @@ package com.kavin.jutils.utils.io;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.support.annotation.NonNull;
+
+import androidx.annotation.NonNull;
 
 import com.kavin.jutils.utils.JUtils;
 

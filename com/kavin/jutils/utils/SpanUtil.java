@@ -6,9 +6,6 @@ import android.graphics.Bitmap;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
-import android.support.annotation.ColorInt;
-import android.support.annotation.DrawableRes;
-import android.support.annotation.Nullable;
 import android.text.Spannable;
 import android.text.SpannableStringBuilder;
 import android.text.TextPaint;
@@ -25,6 +22,10 @@ import android.text.style.StyleSpan;
 import android.text.style.URLSpan;
 import android.view.View;
 import android.widget.TextView;
+
+import androidx.annotation.ColorInt;
+import androidx.annotation.DrawableRes;
+import androidx.annotation.Nullable;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -46,7 +47,7 @@ public class SpanUtil {
         super();
         mSpanFlag = DEF_SPAN_FLAG;
         mBuilder = new SpannableStringBuilder();
-        mContext = jutils.getApp().getApplicationContext();
+        mContext = JUtils.getApp().getApplicationContext();
     }
 
     /**

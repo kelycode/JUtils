@@ -9,7 +9,8 @@ import android.renderscript.Element;
 import android.renderscript.RSRuntimeException;
 import android.renderscript.RenderScript;
 import android.renderscript.ScriptIntrinsicBlur;
-import android.support.annotation.IntRange;
+
+import androidx.annotation.IntRange;
 
 
 /**

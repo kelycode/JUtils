@@ -10,12 +10,13 @@ import android.graphics.Bitmap;
 import android.graphics.Point;
 import android.graphics.Rect;
 import android.provider.Settings;
-import android.support.annotation.NonNull;
 import android.util.DisplayMetrics;
 import android.view.Surface;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+
+import androidx.annotation.NonNull;
 
 import java.lang.reflect.Method;
 
@@ -37,7 +38,7 @@ public final class ScreenUtil {
      * @return Point
      */
     public static Point getScreenSize() {
-        DisplayMetrics metrics = jutils.getApp().getResources().getDisplayMetrics();
+        DisplayMetrics metrics = JUtils.getApp().getResources().getDisplayMetrics();
         return new Point(metrics.widthPixels, metrics.heightPixels);
     }
 
@@ -47,7 +48,7 @@ public final class ScreenUtil {
      * @return 物理尺寸
      */
     public static float getScreenSizeOfDevice() {
-        DisplayMetrics metrics = jutils.getApp().getResources().getDisplayMetrics();
+        DisplayMetrics metrics = JUtils.getApp().getResources().getDisplayMetrics();
         float xdpi = metrics.xdpi;
         float ydpi = metrics.ydpi;
         int width = metrics.widthPixels;

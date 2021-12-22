@@ -49,7 +49,7 @@ public class CrashUtil implements Thread.UncaughtExceptionHandler {
     private OnHandleCrashCallback mCallback;
 
     private CrashUtil(Config config) {
-        mContext = SUtils.getApp().getApplicationContext();
+        mContext = JUtils.getApp().getApplicationContext();
         // 获取系统默认的 UncaughtException 处理器
         mDefaultHandler = Thread.getDefaultUncaughtExceptionHandler();
         // 设置 CrashUtil 为程序的默认处理器
@@ -91,7 +91,7 @@ public class CrashUtil implements Thread.UncaughtExceptionHandler {
                 // 默认路径
                 dirPath = Environment.getExternalStorageDirectory().toString() + File.separator
                         + "CrashUtil" + File.separator
-                        + SUtils.getApp().getPackageName();
+                        + JUtils.getApp().getPackageName();
                 preFix = "crash";
             }
         }
