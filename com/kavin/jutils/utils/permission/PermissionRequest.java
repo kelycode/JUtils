@@ -1,10 +1,23 @@
 package com.kavin.jutils.utils.permission;
 
-
 import android.app.Activity;
 
 import androidx.annotation.NonNull;
 import androidx.core.app.ActivityCompat;
+
+/*
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+String premission[] = {
+    Manifest.permission.READ_EXTERNAL_STORAGE,
+    Manifest.permission.WRITE_EXTERNAL_STORAGE,
+};
+permissRequest = new PermissionRequest(this);
+permissRequest.permissions(premission);
+permissRequest.execute();
+*/
 
 /**
  * 权限请求类
@@ -56,7 +69,8 @@ public class PermissionRequest {
     /**
      * 是否自动显示拒绝授权时的提示
      *
-     * @param isAutoShowTip {@code true}: 显示<br>{@code false}: 不显示
+     * @param isAutoShowTip {@code true}: 显示<br>
+     *                      {@code false}: 不显示
      * @return {@link PermissionRequest}
      */
     public PermissionRequest autoShowTip(boolean isAutoShowTip) {
@@ -105,7 +119,8 @@ public class PermissionRequest {
     /**
      * 获取是否自动显示拒绝授权时的提示
      *
-     * @return {@code true}: 显示<br>{@code false}: 不显示
+     * @return {@code true}: 显示<br>
+     *         {@code false}: 不显示
      */
     public boolean isAutoShowTip() {
         return isAutoShowTip;
