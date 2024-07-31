@@ -1,11 +1,14 @@
 package com.kavin.jutils.utils.io;
 
+// 要使用com.google.gson.Gson，需要在build.gradle里增加：implementation 'com.google.code.gson:gson:2.8.6'
+import com.google.firebase.crashlytics.buildtools.reloc.com.google.common.reflect.TypeToken;
 import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
+//import com.google.gson.reflect.TypeToken;
 
 import java.lang.reflect.Type;
 import java.util.List;
 import java.util.Map;
+
 
 
 /**
