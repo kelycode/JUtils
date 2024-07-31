@@ -17,6 +17,21 @@ String premission[] = {
 permissRequest = new PermissionRequest(this);
 permissRequest.permissions(premission);
 permissRequest.execute();
+
+另一种权限类：
+//第三方权限框架，自己GitHub上看具体使用
+implementation 'com.github.getActivity:XXPermissions:18.0'
+
+import com.hjq.permissions.XXPermissions;
+private String[] permissionArray = {Manifest.permission.CAMERA, Manifest.permission.RECORD_AUDIO, Manifest.permission.WRITE_EXTERNAL_STORAGE};
+
+XXPermissions.with(this).permission(permissionArray).request((permissions, allGranted) -> {
+            if (!allGranted) {
+                Toast.makeText(Camera2Activity.this, "请务必开启所有权限", Toast.LENGTH_LONG).show();
+                return;
+            }
+            //获取权限成功，执行相关操作
+        });
 */
 
 /**
